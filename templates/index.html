@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handwritten Digit Recognition</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Handwritten Digit Recognition</h1>
+            <p>Draw a digit (0-9) in the canvas below and click "Recognize" to see the prediction</p>
+        </header>
+
+        <main>
+            <div class="main-flex-line">
+                <div class="canvas-container">
+                    <canvas id="drawing-canvas" width="280" height="280"></canvas>
+                    <div class="canvas-tools">
+                        <button id="clear-button">Clear</button>
+                        <button id="recognize-button">Recognize</button>
+                    </div>
+                </div>
+
+                <div class="result-container">
+                    <div id="result-display">
+                        <div class="prediction-box">
+                            <h2>Prediction</h2>
+                            <div id="predicted-digit">-</div>
+                            <div id="confidence">Confidence: -</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>AI-Based Handwritten Digit Recognition | Using TensorFlow and CNN</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

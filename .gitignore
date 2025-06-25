@@ -1,0 +1,14 @@
+# Ignore Python virtual environment
+venv/
+
+# Bytecode and cache
+__pycache__/
+*.py[cod]
+
+# VS Code settings
+.vscode/
+
+# Other common ignores
+*.h5
+*.pkl
+*.model
